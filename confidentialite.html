@@ -86,7 +86,7 @@
 <header>
   <h1>Politique de confidentialité de TalkEasy</h1>
   <p class="chapeau">Application iPhone TalkEasy — <code>com.kevinbergeron.talkeasy</code></p>
-  <p class="date">Version 2 — en vigueur au 27 août 2026.</p>
+  <p class="date">Version 3 — en vigueur au 15 septembre 2026.</p>
 </header>
 
 <p>TalkEasy écrit ce que vous dictez et vous aide à le mettre au propre. Cette page dit
@@ -97,10 +97,13 @@ c'est gardé. Elle ne décrit que ce que le code fait réellement aujourd'hui.</
   <p><strong>L'essentiel en quatre points.</strong></p>
   <ul>
     <li><strong>Il n'y a pas de compte.</strong> Ni inscription, ni adresse e-mail, ni mot de passe, ni nom.</li>
-    <li><strong>Vos notes vivent sur votre téléphone.</strong> Elles n'y sont copiées nulle part ailleurs.</li>
-    <li><strong>Deux gestes seulement envoient quelque chose au-dehors</strong> : l'appui sur stop
-    à la fin d'une dictée, et la demande d'une amélioration sur une note. Le contenu envoyé
-    n'est conservé par personne.</li>
+    <li><strong>Vos notes vivent sur votre téléphone.</strong> TalkEasy n'en garde aucune copie
+    ailleurs ; la sauvegarde de votre iPhone, elle, les emporte si elle est activée (voir §2).</li>
+    <li><strong>Trois choses seulement partent pour être écrites ou mises au propre</strong> :
+    l'enregistrement d'une dictée, le court enregistrement du micro de la recherche, et le texte
+    d'une note dont vous demandez une amélioration. Elles passent par le guichet de TalkEasy, puis
+    par OpenRouter jusqu'à Gemini, l'IA de Google, et leur contenu n'est conservé ni par TalkEasy,
+    ni par OpenRouter, ni par Google.</li>
     <li><strong>Aucune publicité, aucun mouchard, aucune statistique d'usage.</strong>
     L'application ne contient aucun outil de mesure d'audience ni de suivi publicitaire.</li>
   </ul>
@@ -124,9 +127,9 @@ ou pour exercer vos droits, écrivez à cette adresse.</p>
 
 <h2>2. Ce que TalkEasy garde sur votre téléphone</h2>
 
-<p>L'essentiel de ce que vous produisez avec TalkEasy ne quitte jamais votre iPhone. C'est écrit
-dans l'espace de stockage privé de l'application, celui qu'iOS réserve à chaque app et auquel
-aucune autre application n'a accès.</p>
+<p>L'essentiel de ce que vous produisez avec TalkEasy reste sur votre iPhone, et TalkEasy n'en garde
+aucune copie ailleurs. C'est écrit dans l'espace de stockage privé de l'application, celui qu'iOS
+réserve à chaque app et auquel aucune autre application n'a accès.</p>
 
 <div class="tableau-cadre">
 <table>
@@ -184,6 +187,14 @@ aucune autre application n'a accès.</p>
 </table>
 </div>
 
+<h3>La sauvegarde de votre iPhone</h3>
+<p>Quand votre iPhone est sauvegardé, dans iCloud ou sur un ordinateur, iOS copie dans cette
+sauvegarde les données des apps, dont celles de TalkEasy sauf si vous l'en avez retirée : vos notes,
+vos enregistrements, les réponses de l'IA. Un iPhone restauré depuis cette sauvegarde retrouve vos
+notes, tout comme un nouvel iPhone transféré depuis l'ancien ; et une sauvegarde faite avant une
+suppression contient encore ce qui a été supprimé. Cette copie est gardée par Apple dans votre compte
+iCloud, ou sur votre ordinateur : TalkEasy n'y a pas accès.</p>
+
 <h3>Comment tout effacer</h3>
 <ul>
   <li><strong>Une note</strong> : la supprimer dans l'application efface d'un seul geste son texte,
@@ -200,25 +211,37 @@ ici ne le résilie et rien ne le rembourse.</p>
 
 <h2>3. Ce qui part vers un serveur, et quand</h2>
 
-<p>TalkEasy ne communique avec l'extérieur qu'à trois occasions, et jamais en arrière-plan.</p>
+<p>Trois choses seulement partent de votre téléphone pour être écrites ou mises au propre, et jamais
+en arrière-plan : elles sont décrites en a, b et c. L'application lit aussi ses propres textes et
+dessins au lancement (d), et vérifie votre abonnement auprès d'Apple et de RevenueCat (voir §5).</p>
 
-<h3>a. La transcription — quand vous appuyez sur stop</h3>
-<p>L'enregistrement audio de votre dictée est envoyé pour être mis en mots, et les mots reviennent.
-<strong>C'est le seul moment où votre voix quitte le téléphone</strong> : jamais pendant que vous parlez,
-jamais en fond, jamais sans que vous l'ayez demandé. Il en va de même pour le court enregistrement
-du micro de la recherche, qui est jeté aussitôt le mot revenu et n'est rangé nulle part.</p>
+<h3>a. La transcription — quand une dictée se termine</h3>
+<p>L'enregistrement audio de votre dictée est envoyé pour être mis en mots quand vous la terminez,
+qu'elle s'arrête d'elle-même ou que vous touchez une dictée interrompue pour écrire son texte, et les
+mots reviennent. L'essai de dictée proposé à la première ouverture de l'application suit le même
+chemin, et son enregistrement est effacé juste après.</p>
 
-<h3>b. Les améliorations — quand vous en demandez une</h3>
+<h3>b. Le micro de la recherche — quand il se referme</h3>
+<p>Le court enregistrement de ce que vous cherchez est envoyé pour être mis en mots quand le micro se
+referme de lui-même, après un court silence qui suit vos mots ou au bout de dix secondes. Il est jeté
+aussitôt le mot revenu, et rien n'en est rangé sur le téléphone. Si personne n'a parlé, le micro se
+referme sans rien envoyer.</p>
+
+<p><strong>TalkEasy n'envoie votre voix que de ces deux façons</strong>, par une dictée ou par une
+recherche à la voix, une fois le micro refermé : jamais pendant que vous parlez, jamais en fond,
+jamais sans que vous l'ayez demandé.</p>
+
+<h3>c. Les améliorations — quand vous en demandez une</h3>
 <p>Quand vous touchez <em>Reformuler</em>, <em>Résumer</em>, <em>En tâches</em> ou <em>Changer le ton</em>,
-le texte de cette note part, accompagné du seul style d'écriture que vous avez choisi à l'accueil.
-Une note dont vous ne demandez rien ne sort jamais de votre téléphone.</p>
+le texte de cette note part, accompagné du seul style d'écriture que vous avez choisi.
+Une note dont vous ne demandez rien n'est jamais envoyée.</p>
 
-<h3>c. Les textes et dessins de l'application — au lancement</h3>
+<h3>d. Les textes et dessins de l'application — au lancement</h3>
 <p>L'application va lire ses propres phrases et ses propres illustrations sur son serveur. C'est une
 lecture seule : <strong>rien de ce qui vous appartient ne remonte par ce chemin.</strong></p>
 
 <div class="encadre">
-  <p><strong>Ce qui ne part jamais, en aucune circonstance :</strong> votre nom, votre adresse e-mail,
+  <p><strong>Ce que TalkEasy n'envoie jamais, en aucune circonstance :</strong> votre nom, votre adresse e-mail,
   vos contacts, votre carnet d'adresses, votre position, vos photos, la liste de vos notes, ni le
   détail de ce que vous faites dans l'application. TalkEasy ne demande aucune de ces autorisations.</p>
 </div>
@@ -240,12 +263,13 @@ rend la réponse.</p>
 <h3>Le contenu n'est conservé par personne</h3>
 <p>Le guichet confie votre enregistrement ou votre texte au service d'intelligence artificielle
 <strong>sans votre nom, sans votre numéro, sans rien qui vous désigne</strong>. La demande transite
-par <strong>OpenRouter</strong> et est traitée par le modèle <strong>Google Gemini 2.5 Flash Lite</strong>.
+par <strong>OpenRouter</strong> et est traitée par le modèle <strong>Google Gemini 2.5 Flash-Lite</strong>.
 Chaque appel exige explicitement une <strong>rétention zéro</strong> (<code>zdr</code>) : le contenu
 est utilisé le temps de produire la réponse, puis il disparaît. Il n'est ni conservé, ni archivé, ni
 utilisé pour entraîner quelque modèle que ce soit. Si aucun fournisseur ne peut garantir cette
-rétention zéro, l'appel échoue plutôt que d'être routé ailleurs. TalkEasy, de son côté, n'en garde
-aucune copie sur le serveur.</p>
+rétention zéro, l'appel échoue plutôt que d'être routé ailleurs. OpenRouter, lui, n'en enregistre pas
+le contenu : il garde des données techniques sur chaque demande, comme le modèle, sa taille, sa durée
+et son coût. TalkEasy, de son côté, n'en garde aucune copie sur le serveur.</p>
 
 <h3>La seule chose que le serveur écrit</h3>
 <p>Pour chaque appel réellement parti chez l'IA, le guichet inscrit <strong>une ligne de comptabilité</strong>,
@@ -343,7 +367,7 @@ ni prêté à qui que ce soit.</p>
       <td>États-Unis</td>
     </tr>
     <tr>
-      <td><strong>Google (Gemini 2.5 Flash Lite)</strong></td>
+      <td><strong>Google (Gemini 2.5 Flash-Lite)</strong></td>
       <td>Transcrit l'audio et rend les améliorations de texte</td>
       <td>Le contenu de la demande, en rétention zéro</td>
       <td>Selon l'acheminement, en rétention zéro imposée</td>
@@ -351,7 +375,7 @@ ni prêté à qui que ce soit.</p>
     <tr>
       <td><strong>Apple (App Store)</strong></td>
       <td>Encaisse l'abonnement, fournit la reconnaissance vocale et les notifications locales</td>
-      <td>Le paiement. Aucune de vos notes</td>
+      <td>Le paiement. TalkEasy ne lui transmet aucune de vos notes</td>
       <td>Selon la politique d'Apple</td>
     </tr>
     <tr>
@@ -377,8 +401,9 @@ par l'application.</p>
   puis effacement automatique.</li>
   <li><strong>Gérer l'abonnement</strong> — exécution du contrat (article 6.1.b). Conservation :
   par Apple et RevenueCat, selon leurs politiques respectives.</li>
-  <li><strong>Ce qui est sur votre téléphone</strong> — cela reste chez vous, sous votre contrôle
-  exclusif. Conservation : aussi longtemps que vous le décidez.</li>
+  <li><strong>Ce qui est sur votre téléphone</strong> — cela reste chez vous, sous votre contrôle, avec
+  la copie qu'en garde la sauvegarde de l'iPhone si elle est activée (voir §2). Conservation : aussi
+  longtemps que vous le décidez.</li>
 </ul>
 
 <h2>10. Vos droits</h2>
@@ -418,7 +443,8 @@ exécuter ce que la personne demande, et rien n'en est conservé ensuite.</p>
 
 <p>Si vous êtes parent et que votre enfant a utilisé l'application, il n'y a rien à nous demander
 de supprimer — tout ce qu'il a produit est sur le téléphone, et s'efface depuis l'application
-elle-même (voir la section 2).</p>
+elle-même ; une sauvegarde de l'iPhone faite avant l'effacement peut encore le contenir (voir la
+section 2).</p>
 
 <h2>12. Modifications de cette politique</h2>
 
@@ -444,7 +470,7 @@ CA 94107, États-Unis. Site : <a href="https://github.com">github.com</a>.</p>
   Contact : <a href="mailto:contact@talkeasy-app.fr">contact@talkeasy-app.fr</a><br>
   <a href="./support.html">Aide et contact</a><br>
   <a href="./">talkeasy-app.fr</a><br>
-  Dernière mise à jour : 27 août 2026.</p>
+  Dernière mise à jour : 15 septembre 2026.</p>
 </footer>
 
 </main>
