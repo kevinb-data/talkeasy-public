@@ -86,7 +86,7 @@
 <header>
   <h1>Politique de confidentialité de TalkEasy</h1>
   <p class="chapeau">Application iPhone TalkEasy — <code>com.kevinbergeron.talkeasy</code></p>
-  <p class="date">Version 3 — en vigueur au 15 septembre 2026.</p>
+  <p class="date">Version 4 — en vigueur au 16 septembre 2026.</p>
 </header>
 
 <p>TalkEasy écrit ce que vous dictez et vous aide à le mettre au propre. Cette page dit
@@ -145,8 +145,9 @@ réserve à chaque app et auquel aucune autre application n'a accès.</p>
     </tr>
     <tr>
       <td><strong>Vos enregistrements audio</strong>, un fichier par dictée</td>
-      <td>Pouvoir réécouter, et pouvoir renvoyer la dictée à la transcription si l'envoi a échoué</td>
-      <td>Ils partent avec la note à laquelle ils appartiennent</td>
+      <td>Pouvoir envoyer plus tard à la transcription une dictée interrompue, ou dont l'envoi a échoué.
+      Une fois la note écrite, l'application ne s'en sert plus : l'enregistrement reste rangé avec elle</td>
+      <td>Ils partent avec la note à laquelle ils appartiennent, ou avec l'application</td>
     </tr>
     <tr>
       <td><strong>Les textes que l'IA vous a rendus</strong>, gardés à côté de la note d'origine</td>
@@ -158,24 +159,28 @@ réserve à chaque app et auquel aucune autre application n'a accès.</p>
       <td><strong>Vos réponses au questionnaire d'accueil</strong> : ce qui vous correspond,
       le style d'écriture, la façon de commencer</td>
       <td>Adapter l'application, et transmettre le style choisi avec une demande d'amélioration</td>
-      <td>Jusqu'à réinitialisation ou désinstallation</td>
+      <td>Jusqu'à ce que vous supprimiez l'application. Le style se change dans les Réglages de
+      l'application</td>
     </tr>
     <tr>
       <td><strong>Le fait que vous avez traversé l'accueil</strong></td>
       <td>Ne pas vous le reproposer à chaque lancement</td>
-      <td>Jusqu'à réinitialisation ou désinstallation</td>
+      <td>Jusqu'à ce que vous supprimiez l'application</td>
     </tr>
     <tr>
       <td><strong>Un numéro tiré au hasard</strong> par votre téléphone, ainsi que le nombre
       d'appels à l'IA et leur coût cumulé</td>
-      <td>Permettre au serveur de compter les demandes d'un même appareil et d'empêcher les
-      emballements (voir §4)</td>
-      <td>Jusqu'à réinitialisation ou désinstallation</td>
+      <td>Le numéro accompagne chaque demande, pour que le serveur compte celles d'un même appareil
+      et empêche les emballements (voir §4). TalkEasy n'envoie jamais le nombre d'appels ni leur
+      coût : seuls les lisent des outils de test du développeur, que l'application publiée n'ouvre
+      pas</td>
+      <td>Jusqu'à ce que vous supprimiez l'application</td>
     </tr>
     <tr>
       <td><strong>Votre choix concernant les rappels</strong> (allumés ou éteints)</td>
       <td>Respecter ce réglage au lancement suivant</td>
-      <td>Jusqu'à réinitialisation ou désinstallation</td>
+      <td>Jusqu'à ce que vous supprimiez l'application. Le choix se change dans les Réglages de
+      l'application</td>
     </tr>
     <tr>
       <td><strong>Les textes et dessins de l'application</strong> téléchargés au lancement</td>
@@ -199,13 +204,14 @@ iCloud, ou sur votre ordinateur : TalkEasy n'y a pas accès.</p>
 <ul>
   <li><strong>Une note</strong> : la supprimer dans l'application efface d'un seul geste son texte,
   son enregistrement audio et les réponses de l'IA gardées avec elle.</li>
-  <li><strong>Tout</strong> : Réglages de l'application › <em>Tout réinitialiser</em> efface les sept
-  catégories ci-dessus et annule les rappels programmés. L'application redevient neuve.</li>
-  <li><strong>Désinstaller TalkEasy</strong> emporte l'intégralité de ce stockage avec elle : iOS
-  supprime l'espace privé de l'application.</li>
+  <li><strong>Supprimer TalkEasy</strong> de l'iPhone efface l'intégralité de ce stockage : iOS
+  supprime l'espace privé de l'application. L'application n'a pas de bouton pour effacer vos
+  réponses au questionnaire d'accueil, le fait de l'avoir traversé, le numéro tiré au hasard ni votre
+  choix concernant les rappels : c'est sa suppression qui les emporte. Libérer l'espace de l'app sans
+  la supprimer, depuis les réglages de stockage de l'iPhone, garde en revanche ses données.</li>
 </ul>
 
-<p>Un point à connaître : votre abonnement, lui, n'est pas concerné par « Tout réinitialiser ».
+<p>Un point à connaître : votre abonnement, lui, n'est concerné par aucun de ces gestes.
 Il ne vit pas sur le téléphone mais sur votre compte Apple (voir §5). Rien de ce que vous effacez
 ici ne le résilie et rien ne le rembourse.</p>
 
@@ -286,8 +292,10 @@ carte bancaire au bout. Elles sont <strong>effacées automatiquement au-delà de
 
 <p>Le numéro n'est ni un compte ni un nom. Votre téléphone le tire au hasard la première fois qu'il
 appelle le guichet ; il ne contient aucune information sur vous, sur votre appareil ou sur votre
-compte Apple, et il ne permet de vous identifier ni directement ni indirectement. Vous pouvez en
-tirer un nouveau à tout moment via « Tout réinitialiser ».</p>
+compte Apple, et il ne permet de vous identifier ni directement ni indirectement. Il reste sur le
+téléphone tant que l'application y est : la supprimer l'efface, et, une fois réinstallée, elle en
+tire un nouveau à son premier appel. Un iPhone restauré depuis une sauvegarde retrouve en revanche
+l'ancien, copié avec le reste des données de l'application (voir §2).</p>
 
 <h2>5. Le paiement et l'abonnement</h2>
 
@@ -326,18 +334,24 @@ en relisant le reçu déjà présent sur le téléphone, que l'abonnement ne se 
     <tr><th>Autorisation</th><th>À quoi elle sert</th></tr>
   </thead>
   <tbody>
-    <tr><td><strong>Micro</strong></td><td>Enregistrer ce que vous dictez. Le micro ne s'ouvre que sur votre geste, et se referme de lui-même</td></tr>
+    <tr><td><strong>Micro</strong></td><td>Enregistrer vos dictées, l'essai de la première ouverture compris, et vos recherches à la voix. Demandée à la première ouverture, avant cet essai. Le micro ne s'ouvre que sur votre geste. Une dictée s'arrête quand vous la terminez ou la jetez, ou d'elle-même, au plus tard au bout de vingt minutes d'enregistrement ; une recherche s'arrête quand vous l'annulez, ou d'elle-même, au plus tard au bout de dix secondes</td></tr>
     <tr><td><strong>Reconnaissance vocale</strong></td><td>Afficher vos mots au fil de la voix, par la reconnaissance de l'iPhone, sur l'appareil</td></tr>
-    <tr><td><strong>Notifications</strong></td><td>Deux rappels locaux, décrits ci-dessous. Demandée une seule fois, au moment où l'essai démarre. Un refus n'empêche rien</td></tr>
-    <tr><td><strong>Détection de mouvement</strong></td><td>Détecter quand vous secouez le téléphone pour arrêter une dictée. Rien n'est enregistré ni transmis</td></tr>
+    <tr><td><strong>Notifications</strong></td><td>Trois rappels locaux, décrits ci-dessous. Demandée une fois au plus : quand un abonnement est pris ou retrouvé sur l'écran de l'offre, avec ou sans essai, ou à l'arrivée sur l'accueil après « Continuer sans abonnement ». Un refus n'empêche rien</td></tr>
   </tbody>
 </table>
 </div>
 
-<p><strong>Les rappels sont locaux.</strong> Deux notifications peuvent être programmées : l'annonce du
-prélèvement à la fin de l'essai, et le rappel d'une dictée laissée en plan. C'est iOS qui les garde et
-qui vous les sert à l'heure dite : pas de serveur, pas de compte, pas de jeton d'envoi. Cela fonctionne
-en mode avion. Vous pouvez les éteindre dans les Réglages de l'application.</p>
+<p><strong>Les rappels sont locaux.</strong> Trois notifications peuvent être programmées : l'annonce du
+prélèvement, vingt-quatre heures avant la fin d'un essai qui va devenir payant ; le rappel d'une dictée
+laissée en plan, le lendemain à 9 h, une seule fois ; et, pour qui est entré par « Continuer sans
+abonnement », un rappel unique le surlendemain à 9 h, qui rouvre l'offre quand on le touche et disparaît
+dès qu'un abonnement s'ouvre. C'est iOS qui les garde et qui vous les sert à l'heure dite : pas de
+serveur, pas de compte, pas de jeton d'envoi. Cela fonctionne en mode avion. L'interrupteur « Rappels »
+des Réglages de l'application les éteint tous les trois.</p>
+
+<p><strong>Secouer le téléphone ne demande aucune autorisation.</strong> Pendant une dictée, une secousse
+franche ouvre la même question que le lien <em>Annuler</em> : l'application lit pour cela l'accéléromètre
+de l'iPhone, sans rien en garder ni en transmettre.</p>
 
 <h2>7. Aucune publicité, aucun suivi</h2>
 
@@ -415,13 +429,14 @@ personnelles.</p>
 <p>Dans le cas de TalkEasy, la réponse la plus honnête est celle-ci : <strong>il n'y a rien à
 retrouver côté serveur.</strong> Vous n'avez pas de compte, aucune de vos données n'est stockée
 chez nous sous une forme rattachée à vous, et le numéro aléatoire de votre appareil ne désigne
-personne. L'exercice concret de ces droits se fait donc directement dans l'application :</p>
+personne. L'exercice concret de ces droits se fait donc directement sur votre téléphone :</p>
 
 <ul>
   <li><strong>Accès et portabilité</strong> : vos notes sont visibles dans l'application et le texte
   s'y copie librement.</li>
-  <li><strong>Effacement</strong> : supprimer une note, ou <em>Réglages › Tout réinitialiser</em>,
-  ou désinstaller l'application.</li>
+  <li><strong>Effacement</strong> : supprimer une note dans l'application, ou supprimer l'application
+  elle-même, qui emporte tout ce qu'elle garde sur le téléphone ; une sauvegarde de l'iPhone faite
+  avant l'effacement peut en garder une copie (voir §2).</li>
 </ul>
 
 <p>Pour toute demande ou toute question, écrivez à
@@ -442,9 +457,9 @@ est fixé à 15 ans. TalkEasy ne repose sur aucun consentement de ce type : le s
 exécuter ce que la personne demande, et rien n'en est conservé ensuite.</p>
 
 <p>Si vous êtes parent et que votre enfant a utilisé l'application, il n'y a rien à nous demander
-de supprimer — tout ce qu'il a produit est sur le téléphone, et s'efface depuis l'application
-elle-même ; une sauvegarde de l'iPhone faite avant l'effacement peut encore le contenir (voir la
-section 2).</p>
+de supprimer — tout ce qu'il a produit est sur le téléphone : une note s'efface dans l'application,
+et supprimer l'application efface tout, notes comprises ; une sauvegarde de l'iPhone faite avant
+l'effacement peut encore contenir ce qu'il a produit (voir la section 2).</p>
 
 <h2>12. Modifications de cette politique</h2>
 
@@ -470,7 +485,7 @@ CA 94107, États-Unis. Site : <a href="https://github.com">github.com</a>.</p>
   Contact : <a href="mailto:contact@talkeasy-app.fr">contact@talkeasy-app.fr</a><br>
   <a href="./support.html">Aide et contact</a><br>
   <a href="./">talkeasy-app.fr</a><br>
-  Dernière mise à jour : 15 septembre 2026.</p>
+  Dernière mise à jour : 16 septembre 2026.</p>
 </footer>
 
 </main>
